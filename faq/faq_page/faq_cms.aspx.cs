@@ -25,14 +25,9 @@ namespace faq_page
             }
             else
             {
-                f.faq_id = txt_id.Text;
-                if (f.DeleteRow())
-                {
-                    err_msg.InnerHtml = "1 row deleted!";
-                }else
-                {
-                    err_msg.InnerHtml = "0 row deleted!";
-                }
+                f.id = Convert.ToInt32(txt_id.Text);
+                f.deleteRow();
+                err_msg.InnerHtml = f.err_Msg;
             }
         }
 
@@ -40,28 +35,23 @@ namespace faq_page
         {
             if (txt_id.Text.Length <= 0 || txt_id.Text == null)
             {
-                err_msg.InnerHtml = "Please enter FAQ ID";
+                err_msg.InnerHtml = "Please enter an ID";
             }
             else if (txt_question.Text.Length <= 0 || txt_question.Text == null)
             {
                 err_msg.InnerHtml = "Please enter a question!";
             }
-            else if (txt_answer.Value.Length <= 0 || txt_answer.Value == null)
+            else if (text_answer.Text.Length <= 0 || text_answer.Text == null)
             {
                 err_msg.InnerHtml = "Please enter an answer for the question!";
             }
             else
             {
-                f.faq_id = txt_id.Text;
-                f.question = txt_question.Text;
-                f.answer = txt_answer.Value;
-                if (f.UpdateRow())
-                {
-                    err_msg.InnerHtml = "1 row updated!";
-                }else
-                {
-                    err_msg.InnerHtml = "No row updated!";
-                }
+                f.id = Convert.ToInt32(txt_id.Text);
+                f.question = Server.HtmlEncode(txt_question.Text);
+                f.answer = Server.HtmlEncode(text_answer.Text);
+                f.updateRow();
+                err_msg.InnerHtml = f.err_Msg;
             }
         }
 
@@ -75,31 +65,45 @@ namespace faq_page
             {
                 err_msg.InnerHtml = "Please enter a question!";
             }
-            else if (txt_answer.Value.Length <= 0 || txt_answer.Value == null)
+            else if (text_answer.Text.Length <= 0 || text_answer.Text == null)
             {
                 err_msg.InnerHtml = "Please enter an answer for the question!";
             }
             else
             {
-                f.faq_id = txt_id.Text;
-                f.question = txt_question.Text;
-                f.answer = txt_answer.Value;
-                if (f.InsertRow())
-                {
-                    err_msg.InnerHtml = "1 row inserted!";
-                }
-                else
-                {
-                    err_msg.InnerHtml = "0 row inserted!";
-                }
+                f.id = Convert.ToInt32(txt_id.Text);
+                f.question = Server.HtmlEncode(txt_question.Text);
+                f.answer = Server.HtmlEncode(text_answer.Text);
+                f.insertRow();
+                err_msg.InnerHtml = f.err_Msg;
             }
         }
 
         protected void btnShow_Click(object sender, EventArgs e)
         {
-            result.InnerHtml = f.showFAQ();
+            result.InnerHtml = f.ShowFAQData();
+            result.Style.Add("display", "block");
 
         }
 
+        protected void btnFind_Click(object sender, EventArgs e)
+        {
+            if (txt_id.Text.Length <= 0 || txt_id.Text == "")
+            {
+                err_msg.InnerHtml = "Please enter Job ID";
+                txt_id.Focus();
+            }
+            else
+            {
+                f.id = Convert.ToInt32(txt_id.Text);
+                f.findQuestionById(txt_question, text_answer);
+                err_msg.InnerHtml = f.err_Msg;
+            }
+        }
+
+        protected void btnFAQPage_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("faq_page.aspx");
+        }
     }
 }

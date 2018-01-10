@@ -22,13 +22,13 @@ namespace faq_page {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txt_search control.
+        /// txt_keyword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_search;
+        protected global::System.Web.UI.WebControls.TextBox txt_keyword;
         
         /// <summary>
         /// btnFind control.

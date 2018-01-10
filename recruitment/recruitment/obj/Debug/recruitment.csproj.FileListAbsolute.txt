@@ -32,3 +32,37 @@
 \\mac\home\documents\visual studio 2015\Projects\recruitment\recruitment\obj\Debug\recruitment.csprojResolveAssemblyReference.cache
 \\mac\home\documents\visual studio 2015\Projects\recruitment\recruitment\obj\Debug\recruitment.dll
 \\mac\home\documents\visual studio 2015\Projects\recruitment\recruitment\obj\Debug\recruitment.pdb
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\ApplicationInsights.config
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\roslyn\csc.exe
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\roslyn\Microsoft.CSharp.Core.targets
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\roslyn\System.Collections.Immutable.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\roslyn\System.Reflection.Metadata.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\roslyn\vbc.exe
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\roslyn\VBCSCompiler.exe
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\roslyn\VBCSCompiler.exe.config
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\recruitment.dll.config
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\recruitment.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\recruitment.pdb
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\Microsoft.AI.Agent.Intercept.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\Microsoft.AI.DependencyCollector.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\Microsoft.AI.PerfCounterCollector.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\Microsoft.AI.ServerTelemetryChannel.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\Microsoft.AI.Web.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\Microsoft.AI.WindowsServer.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\Microsoft.ApplicationInsights.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\Oracle.ManagedDataAccess.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\Microsoft.AI.DependencyCollector.xml
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\Microsoft.AI.ServerTelemetryChannel.xml
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\Microsoft.AI.Web.xml
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\Microsoft.AI.WindowsServer.xml
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\Microsoft.ApplicationInsights.xml
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\obj\Debug\recruitment.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\obj\Debug\recruitment.dll
+\\Mac\Home\Desktop\dotNetProject\recruitment\recruitment\obj\Debug\recruitment.pdb

@@ -40,13 +40,22 @@ namespace faq_page {
         protected global::System.Web.UI.WebControls.TextBox txt_question;
         
         /// <summary>
-        /// txt_answer control.
+        /// text_answer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea txt_answer;
+        protected global::System.Web.UI.WebControls.TextBox text_answer;
+        
+        /// <summary>
+        /// err_msg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl err_msg;
         
         /// <summary>
         /// btnShow control.
@@ -56,6 +65,15 @@ namespace faq_page {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnShow;
+        
+        /// <summary>
+        /// btnFind control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnFind;
         
         /// <summary>
         /// btnInsert control.
@@ -85,13 +103,13 @@ namespace faq_page {
         protected global::System.Web.UI.WebControls.Button btnDelete;
         
         /// <summary>
-        /// err_msg control.
+        /// btnFAQPage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl err_msg;
+        protected global::System.Web.UI.WebControls.Button btnFAQPage;
         
         /// <summary>
         /// result control.
