@@ -1,0 +1,168 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="recruitment_page.aspx.cs" Inherits="recruitment.recruitment_page" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Recruitment Page - Hospital Website</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800" rel="stylesheet"/>
+    <style>
+         html{
+            box-sizing: border-box;
+        }
+
+        *, *::before, *::after{
+            box-sizing: inherit;
+        }
+
+        body{
+            color:#333;
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Raleway', sans-serif;
+            text-align:justify;
+        }
+
+        a, a:visited, a:link, a:active{
+            text-decoration: none;
+        }
+
+        #result{
+            background-color: cadetblue;
+            margin: 1em 0;
+            color: #fff;
+            border-radius: 5px;
+            display: none;
+        }
+
+        form#form1{
+            padding: 2em;
+            background-color: #dedede;
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+        .form-control{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row wrap;
+            font-size: 1rem;
+        }
+        .form-control span{
+            font-weight: 600;
+            flex: 2 1 0;
+            align-items: stretch;
+            margin: auto;
+        }
+
+        .form-control input.btn{
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 1em;
+            background-color: #fff;
+            padding: 1em;
+            flex: 1 1 0;
+        }
+
+        .form-control input, .form-control .text-area, .form-control select{
+            margin: .5em;
+            padding: .5em;
+            border: 1px solid #dedede;
+            flex: 8 1 0;
+        }
+
+        .form-control .text-area{
+            height:100px;
+        }
+        #err_msg{
+            color: crimson;
+            font-weight: 700;
+            text-align: center;
+            margin: 1em;
+        }
+        table{
+            border-collapse: collapse;
+            width:100%;
+        }
+        th{
+            text-align:center;
+        }
+
+        table, tr, td,th{
+            border:1px solid #dedede;
+            padding:1em;
+        }
+
+        table tr td a{
+                display: block;
+                color: #000;
+                font-size: .8rem;
+                background-color: #dedede;
+                text-align: center;
+                padding: 1em;
+                text-transform: uppercase;
+                font-weight: bold;
+                border-radius: 5px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <h1>Welcome to Recruitment Page</h1>
+        <div class="form-control">
+            <asp:Label runat="server">Division</asp:Label>
+            <asp:DropDownList ID="job_division_list" AutoPostBack="true" runat="server">
+                <asp:ListItem Value="All Division">All Division</asp:ListItem>
+                <asp:ListItem Value="Hemodialysis">Hemodialysis</asp:ListItem>
+                <asp:ListItem Value="Gen Surgical">Gen Surgical</asp:ListItem>
+                <asp:ListItem Value="General Emergency">General Emergency</asp:ListItem>
+                <asp:ListItem Value="Post Anaesthetic Care Unit">Post Anaesthetic Care Unit</asp:ListItem>
+                <asp:ListItem Value="Cath Suite">Cath Suite</asp:ListItem>
+                <asp:ListItem Value="Chief Psychology">Chief Psychology</asp:ListItem>
+                <asp:ListItem Value="Dental Clinic">Dental Clinic</asp:ListItem>
+                <asp:ListItem Value="Plant Maintenance">Plant Maintenance</asp:ListItem>
+                <asp:ListItem Value="Employee Service">Employee Service</asp:ListItem>
+                <asp:ListItem Value="Housekeeping">Housekeeping</asp:ListItem>
+                <asp:ListItem Value="Endoscopy">Endoscopy</asp:ListItem>
+                <asp:ListItem Value="Plant Operation">Plant Operation</asp:ListItem>
+                <asp:ListItem Value="Perfusion">Perfusion</asp:ListItem>
+                <asp:ListItem Value="Systems Architecture">Systems Architecture</asp:ListItem>
+                <asp:ListItem Value="Finance Operator">Finance Operator</asp:ListItem>
+                <asp:ListItem Value="Surg Day Care Unit">Surg Day Care Unit</asp:ListItem>
+                <asp:ListItem Value="Main Electrical">Main Electrical</asp:ListItem>
+                <asp:ListItem Value="Obstetrical Suite">Obstetrical Suite</asp:ListItem>
+            </asp:DropDownList>
+        </div>
+        <div class="form-control">
+            <asp:Label runat="server">Category</asp:Label>
+            <asp:DropDownList ID="job_category_list" AutoPostBack="true" runat="server">
+                <asp:ListItem Value="All Categories">All Categories</asp:ListItem>
+                <asp:ListItem Value="Nursing">Nursing</asp:ListItem>
+                <asp:ListItem Value="Allied Health Professional">Allied Health Professional</asp:ListItem>
+                <asp:ListItem Value="Management">Management</asp:ListItem>
+                <asp:ListItem Value="Facilities and Maintenance">Facilities and Maintenance</asp:ListItem>
+                <asp:ListItem Value="Information System Technology">Information System Technology</asp:ListItem>
+                <asp:ListItem Value="Admin">Admin</asp:ListItem>
+                <asp:ListItem Value="Diagnostic Imaging">Diagnostic Imaging</asp:ListItem>
+                <asp:ListItem Value="Health Information Management">Health Information Management</asp:ListItem>
+                <asp:ListItem Value="Nutrition and Food Service">Nutrition and Food Service</asp:ListItem>
+                <asp:ListItem Value="Radiation Therapy">Radiation Therapy</asp:ListItem>
+                <asp:ListItem Value="Support">Support</asp:ListItem>
+                <asp:ListItem Value="Admin">Admin</asp:ListItem>
+            </asp:DropDownList>
+        </div>
+        <div class="form-control">
+            <asp:Label runat="server">Search By Keyword</asp:Label>
+            <asp:TextBox runat="server" ID="txt_keyword"></asp:TextBox>
+        </div>
+        <div id="err_msg" runat="server"></div>
+        <div class="form-control">
+            <asp:Button CssClass="btn" ID="btnSearch" runat="server" Text="Search Now" OnClick="btnSearch_Click" />
+        </div>
+        
+        <div id="result" runat="server"></div>
+    </form>
+</body>
+</html>
