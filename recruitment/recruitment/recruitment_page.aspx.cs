@@ -48,6 +48,7 @@ namespace recruitment
             {
                 r.job_title = txt_keyword.Text;
                 result.InnerHtml = r.findSpecificJob("keyword");
+                txt_keyword.Text = "";
                 result.Style.Add("display", "block");
                 
             }

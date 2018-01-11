@@ -17,6 +17,16 @@ namespace recruitment
 
         }
 
+        protected void resetFields()
+        {
+            txt_id.Text = "";
+            txt_title.Text = "";
+            txt_requirement.Text = "";
+            txt_desc.Text = "";
+            job_category_list.Text = "";
+            job_division_list.Text = "";
+        }
+
         protected void btnShow_Click(object sender, EventArgs e)
         {
             result.InnerHtml = r.showRecruitmentData();
@@ -64,6 +74,7 @@ namespace recruitment
                 r.job_division = job_division_list.Text;
                 r.job_postdate = Convert.ToDateTime(today.ToString("yyyy-MM-dd"));
                 r.insertRow();
+                resetFields();
                 err_msg.InnerHtml = r.err_Msg;
             }
 
@@ -111,6 +122,7 @@ namespace recruitment
                 r.job_division = job_division_list.Text;
                 r.job_postdate = Convert.ToDateTime(today.ToString("yyyy-MM-dd"));
                 r.updateRow();
+                resetFields();
                 err_msg.InnerHtml = r.err_Msg;
             }
         }
@@ -126,6 +138,7 @@ namespace recruitment
             {
                 r.job_id = Convert.ToInt32(txt_id.Text);
                 r.deleteRow();
+                resetFields();
                 err_msg.InnerHtml = r.err_Msg;
             }
         }
