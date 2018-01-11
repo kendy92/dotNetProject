@@ -14,7 +14,7 @@ namespace faq_page
         faq_feature f = new faq_feature();
         protected void Page_Load(object sender, EventArgs e)
         {
-            faq_content.InnerHtml = f.ShowFAQContent();
+            faq_content.InnerHtml = Server.HtmlDecode(f.ShowFAQContent());
         }
 
         protected void btnFind_Click(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace faq_page
             else //if keyword found then search by keyword
             {
                 f.question = txt_keyword.Text;
-                result.InnerHtml = f.findSpecificQuestion();
+                result.InnerHtml = Server.HtmlDecode(f.findSpecificQuestion());
                 result.Style.Add("display", "block");
 
             }

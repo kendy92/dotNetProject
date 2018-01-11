@@ -15,6 +15,7 @@ namespace faq_page.Models
         private string _question;
         private string _answer;
         public string err_Msg = "";
+        HttpServerUtility serverHttp;
 
 
         //properties
@@ -175,7 +176,7 @@ namespace faq_page.Models
                 {
                     while (reader.Read())
                     {
-                        result += "<h2>"+reader["question"]+"</h2><p>"+reader["answer"]+"</p>";
+                        result += "<h2>"+reader["question"]+"</h2><p>"+ reader["answer"] + "</p>";
                     }
                 }
 

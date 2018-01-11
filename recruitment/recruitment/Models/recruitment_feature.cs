@@ -173,7 +173,7 @@ namespace recruitment.Models
                                             "<td>" + reader["job_requirement"] + "</td>" +
                                             "<td>" + reader["job_category"] + "</td>" +
                                             "<td>" + reader["job_division"] + "</td>" +
-                                            "<td>" + reader["job_postdate"] + "</td>" +
+                                            "<td>" + reader["job_postdate"].ToString().Substring(0, 10) + "</td>" +
                                             "</tr>";
                     }
                     result += "</tbody></table>";
@@ -303,10 +303,11 @@ namespace recruitment.Models
                     "</tr>";
                     while (reader.Read())
                     {
+                        
                         result += "<tr><td>" + reader["job_title"] + "</td>" +
                                             "<td>" + reader["job_division"] + "</td>" +
                                             "<td>" + reader["job_category"] + "</td>" +
-                                            "<td>" + reader["job_postdate"] + "</td>" +
+                                            "<td>" + reader["job_postdate"].ToString().Substring(0,10) + "</td>" +
                                              "<td><a href='recruitment_content.aspx?position="+reader["id"]+"'>Apply</a></td>" +
                                             "</tr>";
                     }

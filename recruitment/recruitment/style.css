@@ -28,7 +28,6 @@
         form#form1{
             padding: 2em;
             background-color: #dedede;
-            max-width: 1024px;
             margin: 0 auto;
         }
         .form-control{
@@ -94,6 +93,7 @@
                 text-transform: uppercase;
                 font-size: .85rem;
                 font-weight: 600;
+                text-align: center;
         }
 
         #job-content{
