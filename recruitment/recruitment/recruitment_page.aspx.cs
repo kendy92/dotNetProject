@@ -22,32 +22,32 @@ namespace recruitment
             {
                 if (job_category_list.Items.FindByText("All Categories").Selected && job_division_list.Items.FindByText("All Division").Selected)
                 {
-                    result.InnerHtml = r.findSpecificJob();
+                    result.InnerHtml = Server.HtmlDecode(r.findSpecificJob());
                     result.Style.Add("display", "block");
                 }else if (job_category_list.Items.FindByText("All Categories").Selected == false && job_division_list.Items.FindByText("All Division").Selected == false)
                 {
                     r.job_category = job_category_list.Text;
                     r.job_division = job_division_list.Text;
-                    result.InnerHtml = r.findSpecificJob("both");
+                    result.InnerHtml = Server.HtmlDecode(r.findSpecificJob("both"));
                     result.Style.Add("display", "block");
                 }
                 else if (job_division_list.Items.FindByText("All Division").Selected && job_category_list.Items.FindByText("All Categories").Selected == false)
                 {
                     r.job_category = job_category_list.Text;
-                    result.InnerHtml = r.findSpecificJob("division");
+                    result.InnerHtml = Server.HtmlDecode(r.findSpecificJob("division"));
                     result.Style.Add("display", "block");
                 }
                 else if (job_category_list.Items.FindByText("All Categories").Selected && job_division_list.Items.FindByText("All Division").Selected == false)
                 {
                     r.job_division = job_division_list.Text;
-                    result.InnerHtml = r.findSpecificJob("category");
+                    result.InnerHtml = Server.HtmlDecode(r.findSpecificJob("category"));
                     result.Style.Add("display", "block");
                 }
             }
             else //if keyword found then search by keyword
             {
                 r.job_title = txt_keyword.Text;
-                result.InnerHtml = r.findSpecificJob("keyword");
+                result.InnerHtml = Server.HtmlDecode(r.findSpecificJob("keyword"));
                 txt_keyword.Text = "";
                 result.Style.Add("display", "block");
                 
