@@ -36,7 +36,7 @@ namespace Donation
         {
             Donation_feature d = new Donation_feature();
             //Contact information
-            d.don_amt = Convert.ToInt32(donation_amt.Value);
+            d.don_amt = donation_amt.Value;
             d.title_name = title_id.Text;
             d.f_name = first_name.Value;
             d.l_name = last_name.Value;
@@ -56,14 +56,52 @@ namespace Donation
             d.cred_number = ccn.Value;
             d.cred_name = chn.Value;
             d.cred_exp_date = expireMM.Value + "-" + expireYY.Value;
-            d.cred_sec_code = Convert.ToInt32(csc.Value);
+            d.cred_sec_code = csc.Value;
 
-            d.insertRow();
-
-
-            form1.Visible = false;
-            thank_you.Visible = true;
-            thank_you.InnerHtml = "<h2>Thank you for your donation, " + d.title_name + " " + d.f_name + " " + d.l_name + "! " + "God bless you!</h2>" + d.err_Msg;
+            if (donation_amt.Value.Length <= 0 || donation_amt.Value == "")
+            {
+                thank_you.Visible = true;
+                thank_you.InnerHtml = "Please enter Donation amount";
+                donation_amt.Focus();
+            }
+            else if (ccn.Value.Length <= 15 || ccn.Value == "")
+            {
+                thank_you.Visible = true;
+                thank_you.InnerHtml = "Please enter Credit card number";
+                ccn.Focus();
+            }
+            else if (chn.Value.Length <= 0 || chn.Value == "")
+            {
+                thank_you.Visible = true;
+                thank_you.InnerHtml = "Please enter Cardholder's name";
+                chn.Focus();
+            }
+            else if (expireMM.Value.Length <= 0 || expireMM.Value == "")
+            {
+                thank_you.Visible = true;
+                thank_you.InnerHtml = "Please enter Expiration date Month";
+                expireMM.Focus();
+            }
+            else if (expireYY.Value.Length <= 0 || expireYY.Value == "")
+            {
+                thank_you.Visible = true;
+                thank_you.InnerHtml = "Please enter Expiration date Year";
+                expireYY.Focus();
+            }
+            else if (csc.Value.Length <= 0 || csc.Value == "")
+            {
+                thank_you.Visible = true;
+                thank_you.InnerHtml = "Please enter Card Security Code";
+                csc.Focus();
+            }
+            else
+            {
+                d.insertRow();
+                form1.Visible = false;
+                thank_you.Visible = true;
+                thank_you.InnerHtml = "<h2>Thank you for your donation, " + d.title_name + " " + d.f_name + 
+                    " " + d.l_name + "! " + "God bless you!</h2>" + d.err_Msg;
+            }
         }
     }
 }

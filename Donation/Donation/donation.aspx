@@ -95,6 +95,10 @@
 
              <asp:Label runat="server"><h5>Credit card number</h5></asp:Label>
              <input id="ccn" maxlength="16" runat="server" />
+
+<%--             <asp:Label runat="server"><h5>Credit card number</h5></asp:Label>
+            <asp:TextBox ID="ccn" MaxLength="16" runat="server"></asp:TextBox>--%>
+
              <br />
 
              <asp:Label runat="server"><h5>Cardholder's name</h5></asp:Label>
@@ -131,6 +135,9 @@
 
              <asp:Label runat="server"><h5>Card Security Code</h5></asp:Label>
              <input id="csc" maxlength="3" runat="server" />
+
+             
+            
              <br />
          </div>
 			<div id="donate_button" style="text-align:center">

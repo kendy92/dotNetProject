@@ -11,7 +11,7 @@ namespace Donation.Models
     public class Donation_feature:MasterDB
     {
         //fields
-        private int _don_amt;
+        private string _don_amt;
         private string _title_name;
         private string _f_name;
         private string _l_name;
@@ -27,11 +27,11 @@ namespace Donation.Models
         private string _cred_number;
         private string _cred_name;
         private string _cred_exp_date;
-        private int _cred_sec_code;
+        private string _cred_sec_code;
         private int _id_val;
         public string err_Msg;
         
-        public int don_amt
+        public string don_amt
         {
             get { return _don_amt; }
             set { _don_amt = value; }
@@ -111,7 +111,7 @@ namespace Donation.Models
             get { return _cred_exp_date; }
             set { _cred_exp_date = value; }
         }
-        public int cred_sec_code
+        public string cred_sec_code
         {
             get { return _cred_sec_code; }
             set { _cred_sec_code = value; }
