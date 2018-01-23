@@ -94,6 +94,7 @@
     <Content Include="faq\faq_page.aspx" />
     <Content Include="faq\style.css" />
     <Content Include="Global.asax" />
+    <Content Include="index.aspx" />
     <Content Include="recruitment\recruitment_cms.aspx" />
     <Content Include="recruitment\recruitment_content.aspx" />
     <Content Include="recruitment\recruitment_page.aspx" />
@@ -167,6 +168,13 @@
     </Compile>
     <Compile Include="faq\faq_page.aspx.designer.cs">
       <DependentUpon>faq_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\MasterDB.cs" />
     <Compile Include="Global.asax.cs">
