@@ -130,7 +130,7 @@ namespace BookAppointment.Models
                         content[1] = reader["EMAIL"].ToString();
                         content[2] = reader["PHONE"].ToString();
                         content[3] = reader["SERVICE_ID"].ToString();
-                        content[4] = reader["APPOINTMENT_DATE"].ToString();
+                        content[4] = Convert.ToDateTime(reader["APPOINTMENT_DATE"].ToString()).ToShortDateString();
                         content[5] = reader["MESSAGE"].ToString();
                     }
                 }                
@@ -190,7 +190,7 @@ namespace BookAppointment.Models
                         row += "<td>" + reader["EMAIL"].ToString() + "</td>";
                         row += "<td>" + reader["PHONE"].ToString() + "</td>";
                         row += "<td>" + reader["SERVICE_NAME"].ToString() + "</td>";
-                        row += "<td>" + reader["APPOINTMENT_DATE"].ToString() + "</td>";
+                        row += "<td>" + Convert.ToDateTime(reader["APPOINTMENT_DATE"].ToString()).ToShortDateString() + "</td>";
                         row += "<td class='actions'>" +
                             "<a href = 'editAppointment.aspx?view=true&id=" + reader["ID"].ToString() + "' >" +
                             "<i class='fa fa-eye' aria-hidden='true' title='view'></i></a>" +

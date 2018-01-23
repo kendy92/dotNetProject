@@ -31,7 +31,18 @@ namespace Donation
                 return;
             }
         }
-
+        bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         protected void btn_Click(object sender, EventArgs e)
         {
             Donation_feature d = new Donation_feature();
@@ -64,6 +75,12 @@ namespace Donation
                 thank_you.InnerHtml = "Please enter Donation amount";
                 donation_amt.Focus();
             }
+            else if (!IsValidEmail(email.Value))
+            {
+                thank_you.Visible = true;
+                thank_you.InnerHtml = "Please enter valid email";
+                email.Focus();
+            }
             else if (ccn.Value.Length <= 15 || ccn.Value == "")
             {
                 thank_you.Visible = true;
@@ -88,6 +105,7 @@ namespace Donation
                 thank_you.InnerHtml = "Please enter Expiration date Year";
                 expireYY.Focus();
             }
+            
             else if (csc.Value.Length <= 0 || csc.Value == "")
             {
                 thank_you.Visible = true;
