@@ -106,3 +106,8 @@
             background-color: #dedede;
             padding: .5em 2em;
         }
+
+        #job-wrapper h4{
+            font-size:1.3rem;
+            text-decoration: underline;
+        }

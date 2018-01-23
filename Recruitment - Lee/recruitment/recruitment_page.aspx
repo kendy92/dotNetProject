@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Recruitment Page - Hospital Website</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800" rel="stylesheet"/>
     <link href="style.css" rel="stylesheet"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -12,6 +13,9 @@
 <body>
     <form id="form1" runat="server">
         <h1>Welcome to Recruitment Page</h1>
+        <p>When you send your application to recruitment_team@hospital.com, you will receive an email confirming receipt. A recruitment team member will then review the information you have submitted against the requirements for the position and determine if your skills, abilities and experience match with the position being filled. The recruitment team member will share their recommendations with the hiring manager to review and consider.</p>
+        <p>Based on this review, you may be contacted by a member of the recruitment team for the pre-screen interview. </p>
+        <p>Please select the options below or enter a search keyword to find available positions in our hospital.</p>
         <div class="form-control">
             <asp:Label runat="server">Division</asp:Label>
             <asp:DropDownList ID="job_division_list" AutoPostBack="true" runat="server">

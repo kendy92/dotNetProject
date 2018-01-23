@@ -15,14 +15,20 @@ namespace recruitment
         {
             if(Request.QueryString["position"] != null || Request.QueryString["position"] != "")
             {
-                int job_id = Convert.ToInt32(Request.QueryString["position"]);
-                r.job_id = job_id;
-                string[] data = r.showRecruitmentContent();
-                h_title.InnerHtml = data[0];
-                h_category.InnerHtml = "Category: " + data[4];
-                h_division.InnerHtml = "Division: " + data[3];
-                c_desc.InnerHtml = Server.HtmlDecode(data[1]);
-                c_require.InnerHtml = Server.HtmlDecode(data[2]);
+
+                    int job_id = Convert.ToInt32(Request.QueryString["position"]);
+                    r.job_id = job_id;
+                    string[] data = r.showRecruitmentContent();
+                    h_title.InnerHtml = data[0];
+                    h_category.InnerHtml = "Category: " + data[4];
+                    h_division.InnerHtml = "Division: " + data[3];
+                    c_desc.InnerHtml = Server.HtmlDecode(data[1]);
+                    c_require.InnerHtml = Server.HtmlDecode(data[2]);
+                    if(r.redirect == true)
+                    {
+                        Response.Redirect("recruitment_page.aspx");
+                    }
+                    
                 
             }
         }

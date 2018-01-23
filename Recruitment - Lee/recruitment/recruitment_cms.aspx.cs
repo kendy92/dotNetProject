@@ -29,7 +29,7 @@ namespace recruitment
 
         protected void btnShow_Click(object sender, EventArgs e)
         {
-            result.InnerHtml = r.showRecruitmentData();
+            result.InnerHtml =Server.HtmlDecode(r.showRecruitmentData());
             result.Style.Add("display", "block");
         }
 

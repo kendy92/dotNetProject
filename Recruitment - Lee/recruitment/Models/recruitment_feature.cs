@@ -20,6 +20,8 @@ namespace recruitment.Models
         private string _job_division;
         private DateTime _job_postdate;
         public string err_Msg = "";
+        public bool redirect = false;
+
 
         //properties
         public int job_id
@@ -244,26 +246,26 @@ namespace recruitment.Models
             {
                 conn.Open();
                 string result = "";
-                string query = "";
+                string query = "SELECT * FROM recruitment ";
                 if (search_mode == "all")
                 {
-                    query = "SELECT * FROM recruitment ORDER BY id DESC";
+                    query += "ORDER BY id DESC";
                 }
                 else if (search_mode == "both") {
-                    query = "SELECT * FROM recruitment WHERE job_category = :j_cate AND job_division = :j_div";
+                    query += "WHERE job_category = :j_cate AND job_division = :j_div";
                 }
                 else if (search_mode == "category")
                 {
-                    query = "SELECT * FROM recruitment WHERE job_division = :j_div ORDER BY id DESC";
+                    query += "WHERE job_division = :j_div ORDER BY id DESC";
 
                 }
                 else if (search_mode == "division")
                 {
-                    query = "SELECT * FROM recruitment WHERE job_category = :j_cate ORDER BY id DESC";
+                    query += "WHERE job_category = :j_cate ORDER BY id DESC";
 
                 } else
                 {
-                    query = "SELECT * FROM recruitment WHERE lower(job_title) LIKE :j_title";
+                    query += "WHERE lower(job_title) LIKE :j_title";
                 }
 
                 cmd = new OracleCommand(query, conn);
@@ -294,7 +296,7 @@ namespace recruitment.Models
                 int count = Convert.ToInt32(cmd.ExecuteScalar());
                 if(count <= 0)
                 {
-                    err_Msg = "No row found!";
+                    err_Msg = "No job found!";
                 }else
                 {
                     result += "<table><tbody><tr>" +
@@ -308,12 +310,12 @@ namespace recruitment.Models
                                             "<td>" + reader["job_division"] + "</td>" +
                                             "<td>" + reader["job_category"] + "</td>" +
                                             "<td>" + reader["job_postdate"].ToString().Substring(0,10) + "</td>" +
-                                             "<td><a href='recruitment_content.aspx?position="+reader["id"]+"'>Apply</a></td>" +
+                                             "<td><a href='recruitment_content.aspx?position="+reader["id"]+ "'>View</a></td>" +
                                             "</tr>";
                     }
                     result += "</tbody></table>";
                 }
-                
+
                 return result;
             }
             catch (OracleException oe)
@@ -339,15 +341,19 @@ namespace recruitment.Models
                 cmd = new OracleCommand(query, conn);
                 cmd.Parameters.Add(new OracleParameter("job_i",job_id));
                 reader = cmd.ExecuteReader();
-                while (reader.Read())
+                if (reader.HasRows) //check if the job id is valid otherwise redirect user back to recruitment page
                 {
-                   
-                    data[0] = reader["job_title"].ToString();
-                    data[1] = reader["job_description"].ToString();
-                    data[2] = reader["job_requirement"].ToString();
-                    data[3] = reader["job_division"].ToString();
-                    data[4] = reader["job_category"].ToString();
-                }
+                    while (reader.Read())
+                    {
+
+                        data[0] = reader["job_title"].ToString();
+                        data[1] = reader["job_description"].ToString();
+                        data[2] = reader["job_requirement"].ToString();
+                        data[3] = reader["job_division"].ToString();
+                        data[4] = reader["job_category"].ToString();
+                    }
+                }else
+                { redirect = true; }
             }
             catch (OracleException oe)
             {
