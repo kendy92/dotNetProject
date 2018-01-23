@@ -90,7 +90,14 @@
     <Content Include="donation\donation.aspx" />
     <Content Include="donation\donation_cms.aspx" />
     <Content Include="donation\style.css" />
+    <Content Include="faq\faq_cms.aspx" />
+    <Content Include="faq\faq_page.aspx" />
+    <Content Include="faq\style.css" />
     <Content Include="Global.asax" />
+    <Content Include="recruitment\recruitment_cms.aspx" />
+    <Content Include="recruitment\recruitment_content.aspx" />
+    <Content Include="recruitment\recruitment_page.aspx" />
+    <Content Include="recruitment\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -146,11 +153,48 @@
       <DependentUpon>donation_cms.aspx</DependentUpon>
     </Compile>
     <Compile Include="donation\Models\Donation_feature.cs" />
+    <Compile Include="faq\faq_cms.aspx.cs">
+      <DependentUpon>faq_cms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="faq\faq_cms.aspx.designer.cs">
+      <DependentUpon>faq_cms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="faq\Models\faq_feature.cs" />
+    <Compile Include="faq\faq_page.aspx.cs">
+      <DependentUpon>faq_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="faq\faq_page.aspx.designer.cs">
+      <DependentUpon>faq_page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\MasterDB.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="recruitment\recruitment_cms.aspx.cs">
+      <DependentUpon>recruitment_cms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recruitment\recruitment_cms.aspx.designer.cs">
+      <DependentUpon>recruitment_cms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="recruitment\recruitment_content.aspx.cs">
+      <DependentUpon>recruitment_content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recruitment\recruitment_content.aspx.designer.cs">
+      <DependentUpon>recruitment_content.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="recruitment\Models\recruitment_feature.cs" />
+    <Compile Include="recruitment\recruitment_page.aspx.cs">
+      <DependentUpon>recruitment_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recruitment\recruitment_page.aspx.designer.cs">
+      <DependentUpon>recruitment_page.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
