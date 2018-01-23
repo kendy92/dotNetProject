@@ -15,6 +15,18 @@ namespace BookAppointment
         {
 
         }
+        bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         protected void resetFields()
         {
             fullname.Text = "";
@@ -33,9 +45,9 @@ namespace BookAppointment
                 err_msg.InnerHtml = "Please enter your name";
                 fullname.Focus();
             }
-            else if (email.Text.Length <= 0 || email.Text == "")
+            else if (!IsValidEmail(email.Text))
             {
-                err_msg.InnerHtml = "Please enter email";
+                err_msg.InnerHtml = "Please enter valid email";
                 email.Focus();
             }
             else if (phone.Text.Length <= 0 || phone.Text == "")

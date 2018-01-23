@@ -46,3 +46,17 @@ C:\Users\PARDEEP\source\repos\ContactUs\ContactUs\obj\Debug\ContactUs.pdb
 \\Mac\Home\Desktop\dotNetProject\ContactUs\ContactUs\obj\Debug\ContactUs.csprojResolveAssemblyReference.cache
 \\Mac\Home\Desktop\dotNetProject\ContactUs\ContactUs\obj\Debug\ContactUs.dll
 \\Mac\Home\Desktop\dotNetProject\ContactUs\ContactUs\obj\Debug\ContactUs.pdb
+C:\OpenServer\domains\Humber\WebAppDevelopment\dotNetProject\ContactUs - Robby\ContactUs\bin\ContactUs.dll.config
+C:\OpenServer\domains\Humber\WebAppDevelopment\dotNetProject\ContactUs - Robby\ContactUs\bin\ContactUs.dll
+C:\OpenServer\domains\Humber\WebAppDevelopment\dotNetProject\ContactUs - Robby\ContactUs\bin\ContactUs.pdb
+C:\OpenServer\domains\Humber\WebAppDevelopment\dotNetProject\ContactUs - Robby\ContactUs\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\OpenServer\domains\Humber\WebAppDevelopment\dotNetProject\ContactUs - Robby\ContactUs\bin\Microsoft.AI.DependencyCollector.xml
+C:\OpenServer\domains\Humber\WebAppDevelopment\dotNetProject\ContactUs - Robby\ContactUs\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\OpenServer\domains\Humber\WebAppDevelopment\dotNetProject\ContactUs - Robby\ContactUs\bin\Microsoft.AI.Web.xml
+C:\OpenServer\domains\Humber\WebAppDevelopment\dotNetProject\ContactUs - Robby\ContactUs\bin\Microsoft.AI.WindowsServer.xml
+C:\OpenServer\domains\Humber\WebAppDevelopment\dotNetProject\ContactUs - Robby\ContactUs\bin\Microsoft.ApplicationInsights.xml
+C:\OpenServer\domains\Humber\WebAppDevelopment\dotNetProject\ContactUs - Robby\ContactUs\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\OpenServer\domains\Humber\WebAppDevelopment\dotNetProject\ContactUs - Robby\ContactUs\obj\Debug\ContactUs.csprojResolveAssemblyReference.cache
+C:\OpenServer\domains\Humber\WebAppDevelopment\dotNetProject\ContactUs - Robby\ContactUs\obj\Debug\ContactUs.csproj.CoreCompileInputs.cache
+C:\OpenServer\domains\Humber\WebAppDevelopment\dotNetProject\ContactUs - Robby\ContactUs\obj\Debug\ContactUs.dll
+C:\OpenServer\domains\Humber\WebAppDevelopment\dotNetProject\ContactUs - Robby\ContactUs\obj\Debug\ContactUs.pdb
