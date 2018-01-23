@@ -57,16 +57,17 @@ namespace BookAppointment.Models
                 conn.Open();
                 string query = "UPDATE hospital_appointments SET " +
                     "fullname = :fullname, email = :email, phone = :phone, " +
-                    "service_id = :service_id, appointment_date = to_date(:a_date ,'DD-MON-dd'), message = :message " +
+                    "service_id = :service_id, appointment_date = :a_date, message = :message " +
                     "WHERE id = :id";
                 cmd = new OracleCommand(query, conn);
-                cmd.Parameters.Add(new OracleParameter("id", Id));
                 cmd.Parameters.Add(new OracleParameter("fullname", Fullname));
                 cmd.Parameters.Add(new OracleParameter("email", Email));
                 cmd.Parameters.Add(new OracleParameter("phone", Phone));
                 cmd.Parameters.Add(new OracleParameter("service_id", Service));
                 cmd.Parameters.Add(new OracleParameter("a_date", Appointment_date));
                 cmd.Parameters.Add(new OracleParameter("message", Message));
+                cmd.Parameters.Add(new OracleParameter("id", Id));
+
                 int row = cmd.ExecuteNonQuery();
                 return row > 0 ? true : false;
             }

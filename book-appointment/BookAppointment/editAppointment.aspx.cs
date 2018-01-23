@@ -15,6 +15,10 @@ namespace BookAppointment
         protected void Page_Load(object sender, EventArgs e)
         {
             int.TryParse(Request.QueryString["id"], out appointment_id);
+            if (IsPostBack)
+            {
+                return;
+            }          
             if (appointment_id > 0)
             {
                 string[] content = app_model.GetById(appointment_id);
@@ -53,7 +57,7 @@ namespace BookAppointment
                 app_model.Email = Server.HtmlEncode(email.Text);
                 app_model.Phone = Server.HtmlEncode(phone.Text);
                 app_model.Service = Convert.ToInt32(service.Text);
-                app_model.Appointment_date = DateTime.Parse(a_date.Text);
+                app_model.Appointment_date = Convert.ToDateTime(a_date.Text);
                 app_model.Message = Server.HtmlEncode(message.Text);
                 bool result = app_model.Update();
                 if (result)
