@@ -1,0 +1,92 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    padding: 1rem 5rem;
+    background-color: #d2ff9b;
+}
+
+    body .edit-page {
+        background-color: initial;
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.3rem 0.7rem;
+}
+
+.fa {
+    font-size: 1.2rem;
+}
+
+.actions {
+    text-align: center;
+}
+
+    .actions a {
+        margin-right: 0.5rem;
+    }
+
+.input-group {
+    margin-bottom: 0.5rem;
+    display: flex;
+}
+
+    .input-group input, .input-group select, .input-group textarea {
+        padding: 0.3rem 0.5rem;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    .input-group label {
+        width: 150px;
+        display: inline-block;
+    }
+
+.search-form {
+    margin-bottom: 0.5rem;
+}
+
+    .search-form button[type=submit] {
+        padding: 0.3rem 1rem;
+    }
+
+    .search-form .input-group {
+        display: inline-block;
+        margin-right: 2rem;
+        margin-bottom: 0;
+        max-width: 200px;
+    }
+
+.edit-form {
+    background-color: #fff;
+    max-width: 500px;
+    padding: 1rem 1.5rem;
+}
+
+.heading__link {
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+/*# sourceMappingURL=admin.css.map */
