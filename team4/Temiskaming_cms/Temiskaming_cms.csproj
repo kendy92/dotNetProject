@@ -84,6 +84,12 @@
     <Content Include="appointments\sources\admin.css" />
     <Content Include="appointments\sources\style.css" />
     <Content Include="appointments\sources\wegotyou.png" />
+    <Content Include="contactus\contact_cms.aspx" />
+    <Content Include="contactus\Contact_page.aspx" />
+    <Content Include="contactus\style.css" />
+    <Content Include="donation\donation.aspx" />
+    <Content Include="donation\donation_cms.aspx" />
+    <Content Include="donation\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -110,6 +116,36 @@
     <Compile Include="appointments\make_appointment.aspx.designer.cs">
       <DependentUpon>make_appointment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="contactus\contact_cms.aspx.cs">
+      <DependentUpon>contact_cms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contactus\contact_cms.aspx.designer.cs">
+      <DependentUpon>contact_cms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contactus\Models\contact_feature.cs" />
+    <Compile Include="contactus\Contact_page.aspx.cs">
+      <DependentUpon>Contact_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contactus\Contact_page.aspx.designer.cs">
+      <DependentUpon>Contact_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="donation\donation.aspx.cs">
+      <DependentUpon>donation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="donation\donation.aspx.designer.cs">
+      <DependentUpon>donation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="donation\donation_cms.aspx.cs">
+      <DependentUpon>donation_cms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="donation\donation_cms.aspx.designer.cs">
+      <DependentUpon>donation_cms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="donation\Models\Donation_feature.cs" />
     <Compile Include="Models\MasterDB.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

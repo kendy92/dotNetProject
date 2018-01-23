@@ -1,0 +1,103 @@
+﻿html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    font-family:Cambria;
+    background-color:#dfdfdf;
+    text-align: justify;
+}
+
+a, a:active, a:visited, a:link {
+    text-decoration: none;
+}
+
+form#form1 {
+    padding: 2em;
+    margin: 0 auto;
+}
+
+.form-control {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    font-size: 1rem;
+    margin:25px;
+}
+
+    .form-control span {
+        font-weight: 600;
+        flex: 1 1 0;
+        align-items: stretch;
+        margin: auto;
+        font-size:20px;
+    }
+
+    .form-control input.btn {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        margin: 1em;
+        background-color: #02610e;
+        padding: 1em;
+        color:#ffffff;
+        min-width:150px;
+    }
+
+    .form-control input[type=text], .form-control .text-area {
+        margin: .3em;
+        padding: .5em;
+        border: 1px solid #dedede;
+        flex: 8 1 0;
+    }
+
+    .form-control select {
+        margin: .3em;
+        padding: .4em;
+        border: 1px solid #dedede;
+        flex: 5 1 0;
+    }
+    
+    
+    .form-control .text-area {
+        height: 100px;
+    }
+
+#err_msg {
+    color: crimson;
+    font-weight: 700;
+    text-align: center;
+    margin: 1em;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    background-color:#ffffff;
+    font-size:19px;
+    margin:0em 4em;
+}
+
+th, td {
+    text-align: center;
+}
+
+table, tr, td, th {
+    border: 1px solid #444;
+    padding: 0.5em;
+}
+
+form#form2 {
+    padding: 2em;
+    margin: 0 0;
+    width:70%;
+}
+
